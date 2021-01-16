@@ -107,6 +107,10 @@ func marshalAccelGroup(p uintptr) (interface{}, error) {
 }
 
 func wrapAccelGroup(obj *glib.Object) *AccelGroup {
+	if obj == nil {
+		return nil
+	}
+
 	return &AccelGroup{obj}
 }
 
@@ -236,6 +240,10 @@ func marshalAccelMap(p uintptr) (interface{}, error) {
 }
 
 func wrapAccelMap(obj *glib.Object) *AccelMap {
+	if obj == nil {
+		return nil
+	}
+
 	return &AccelMap{obj}
 }
 
